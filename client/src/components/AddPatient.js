@@ -1,7 +1,5 @@
 import {
     Button,
-    Checkbox,
-    FormControlLabel,
     FormLabel,
     TextField,
   } from "@mui/material";
@@ -17,7 +15,7 @@ const AddPatient = () => {
       patient_id: "",
       insurance: "",
     });
-    const [checked, setChecked] = useState(false);
+    const [checked] = useState(false);
     const handleChange = (e) => {
       setInputs((prevState) => ({
         ...prevState,
@@ -94,7 +92,7 @@ return (
           />
           <FormLabel>Medical History</FormLabel>
           <TextField
-            value={inputs.insurance}
+            value={inputs.medical_history}
             onChange={handleChange}
             margin="normal"
             fullWidth

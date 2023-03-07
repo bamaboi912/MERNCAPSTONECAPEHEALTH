@@ -6,7 +6,7 @@ const Header = () => {
   const [value, setValue] = useState();
   return (
     <div>
-      <AppBar sx={{ backgroundColor: "blue" }} position="sticky">
+      <AppBar sx={{ backgroundColor: "slategray" }} position="sticky">
         <Toolbar>
           <NavLink to="/" style={{ color: "white" }}>
             <Typography>

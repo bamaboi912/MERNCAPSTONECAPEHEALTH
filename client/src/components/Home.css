@@ -1,0 +1,17 @@
+img{
+    text-align:center ;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    height: 600px;
+
+}
+body{
+    background-color: skyblue;
+}
+h1{
+    text-align: center;
+    color:slategray;
+}
