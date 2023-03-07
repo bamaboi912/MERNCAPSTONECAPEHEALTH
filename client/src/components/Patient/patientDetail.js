@@ -10,6 +10,7 @@ import {
 const PatientDetail = () => {
     const [inputs, setInputs] = useState();
     const id = useParams().id;
+    const [checked, setChecked] = useState(false);
     const history = useNavigate();
     useEffect(() => {
       const fetchHandler = async () => {
@@ -25,8 +26,8 @@ const PatientDetail = () => {
         .put(`http://localhost:3001/patient/${id}`, {
           name: String(inputs.name),
           dob: String(inputs.dob),
-          patient_id: Number(inputs.patient_id),
           insurance: String(inputs.insurance),
+          patient_id: Number(inputs.patient_id),
           medical_history: String(inputs.medical_history),
         })
         .then((res) => res.data);
@@ -101,7 +102,7 @@ return (
             margin="normal"
             fullWidth
             variant="outlined"
-            name="Medical History"/>
+            name="medical_history"/>
              
               <Button variant="contained" type="submit">
                 Update Patient Information
