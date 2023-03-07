@@ -12,10 +12,11 @@ const AddPatient = () => {
     const [inputs, setInputs] = useState({
       name: "",
       dob: "",
-      patient_id: "",
       insurance: "",
+      patient_id: "",
+      medical_history:""
     });
-    const [checked] = useState(false);
+    const [checked, setChecked] = useState(false);
     const handleChange = (e) => {
       setInputs((prevState) => ({
         ...prevState,
@@ -27,8 +28,8 @@ const sendRequest = async () => {
         .post("http://localhost:3001/patient", {
             name: String(inputs.name),
             dob: String(inputs.dob),
-            patient_id: Number(inputs.patient_id),
             insurance: String(inputs.insurance),
+            patient_id: Number(inputs.patient_id),
             medical_history: String(inputs.medical_history),
         })
         .then((res) => res.data);
@@ -71,16 +72,7 @@ return (
             variant="outlined"
             name="dob"
           />
-           <FormLabel>Patient ID:</FormLabel>
-          <TextField
-            value={inputs.patient_id}
-            onChange={handleChange}
-            type="number"
-            margin="normal"
-            fullWidth
-            variant="outlined"
-            name="patient_id"
-          />
+           
           <FormLabel>Insurance</FormLabel>
           <TextField
             value={inputs.insurance}
@@ -90,6 +82,17 @@ return (
             variant="outlined"
             name="insurance"
           />
+
+        <FormLabel>Patient ID:</FormLabel>
+          <TextField
+            value={inputs.patient_id}
+            onChange={handleChange}
+            type="number"
+            margin="normal"
+            fullWidth
+            variant="outlined"
+            name="patient_id"
+          />
           <FormLabel>Medical History</FormLabel>
           <TextField
             value={inputs.medical_history}
@@ -97,8 +100,9 @@ return (
             margin="normal"
             fullWidth
             variant="outlined"
-            name="Medical History"
+            name="medical_history"
           />
+          
           
 <Button variant="contained" type="submit">
            Add A New Patient

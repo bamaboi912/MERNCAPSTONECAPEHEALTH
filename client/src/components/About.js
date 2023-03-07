@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import troopers from "./images/pat.jpg"
-
+import "./About.css"
 const About = () => {
   return (
     <div>
