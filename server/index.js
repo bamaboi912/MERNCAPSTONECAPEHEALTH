@@ -13,7 +13,7 @@ const PORT = 3001
 
 const router = require("./Routes/patientRoutes");
 
-app.use("./patient", router);
+app.use("/patient", router);
 
 
 
