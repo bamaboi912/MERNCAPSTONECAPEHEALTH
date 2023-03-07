@@ -1,12 +1,11 @@
-
 import React from "react";
-import { Link } from "react-router-dom";
+import "./Home.css"
+import hospital from "./images/hosp.jpg"
+
 const Home = () => {
   return (
-    <>
-    
-    
-    
+    <><h1>Cape Health Care</h1>
+    <img src={hospital} alt="hospitald"></img>
     </>
   );
 };
