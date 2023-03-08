@@ -14,11 +14,11 @@ const Patient = (props) => {
   };
 return (
     <div className="card">
-      <article>Patient Name:{name}</article>
+      <h2>Patient Name:{name}</h2>
       <h3>D.O.B:{dob}</h3>
-      <p>Insurance:{insurance}</p>
+      <h3>Insurance:{insurance}</h3>
       <h3>Patient ID: {patient_id}</h3>
-      <p>Medical History: {medical_history}</p>
+      <h3>Medical History: {medical_history}</h3>
       <Button LinkComponent={Link} to={`/patient/${_id}`} sx={{ mt: "auto" }}>
         Update Patient Information
       </Button>

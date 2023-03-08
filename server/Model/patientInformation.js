@@ -22,8 +22,9 @@ const patientSchema = new Schema({
         required: true,
     },
     medical_history:{
-        type: String
-    }
+        type: String,
+        required: true,
+    },
 
 })
 

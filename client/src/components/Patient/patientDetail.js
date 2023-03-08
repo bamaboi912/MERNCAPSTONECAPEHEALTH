@@ -10,7 +10,7 @@ import {
 const PatientDetail = () => {
     const [inputs, setInputs] = useState();
     const id = useParams().id;
-    const [checked, setChecked] = useState(false);
+    
     const history = useNavigate();
     useEffect(() => {
       const fetchHandler = async () => {

@@ -6,6 +6,8 @@ const patientControllers = require("../Controllers/patientControllers")
 //assign functionality to Url's
 
 //localhost:3001/patient/
+router.get("/", patientControllers.getAllPatients)
+
 router.post("/", patientControllers.addPatient);
 
 //localhost/3001/patient/:id
