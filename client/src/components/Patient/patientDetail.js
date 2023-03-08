@@ -15,7 +15,7 @@ const PatientDetail = () => {
     useEffect(() => {
       const fetchHandler = async () => {
         await axios
-          .get(`http://localhost:3001/patient/${id}`)
+          .get(`http://localhost:3002/patient/${id}`)
           .then((res) => res.data)
           .then((data) => setInputs(data.patient));
       };
@@ -23,7 +23,7 @@ const PatientDetail = () => {
     }, [id]);
     const sendRequest = async () => {
       await axios
-        .put(`http://localhost:3001/patient/${id}`, {
+        .put(`http://localhost:3002/patient/${id}`, {
           name: String(inputs.name),
           dob: String(inputs.dob),
           insurance: String(inputs.insurance),

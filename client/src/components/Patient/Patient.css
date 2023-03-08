@@ -23,9 +23,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: flex-start;
-    align-content: flex-start; */
-  }
+}
 .card article {
     padding: 5px;
   }

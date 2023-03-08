@@ -9,7 +9,7 @@ const cors = require("cors");
 
 app.use(cors());
 
-const PORT = 3001
+const PORT = 3002
 
 const router = require("./Routes/patientRoutes");
 

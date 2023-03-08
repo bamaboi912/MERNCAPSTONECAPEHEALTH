@@ -25,7 +25,7 @@ const AddPatient = () => {
     };
 const sendRequest = async () => {
       await axios
-        .post("http://localhost:3001/patient", {
+        .post("http://localhost:3002/patient", {
             name: String(inputs.name),
             dob: String(inputs.dob),
             insurance: String(inputs.insurance),

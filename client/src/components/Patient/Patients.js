@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Patient";
 import axios from "axios";
 import Patient from "./Patient";
-const URL = "http://localhost:3001/patient";
+const URL = "http://localhost:3002/patient";
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
 };

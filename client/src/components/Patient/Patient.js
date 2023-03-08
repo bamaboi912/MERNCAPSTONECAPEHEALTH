@@ -7,7 +7,7 @@ const Patient = (props) => {
   const { _id, name, dob, insurance, patient_id, medical_history} = props.patient;
   const deleteHandler = async () => {
     await axios
-      .delete(`http://localhost:3001/patient/${_id}`)
+      .delete(`http://localhost:3002/patient/${_id}`)
       .then((res) => res.data)
       .then(() => history("/"))
       .then(() => history("/patient"));
